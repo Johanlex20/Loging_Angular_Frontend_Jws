@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms'; 
+import { FormBuilder, Validators } from '@angular/forms'; 
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,13 +10,23 @@ import { FormBuilder } from '@angular/forms';
 export class LoginComponent implements OnInit{
 
   loginForm = this.formBuilder.group({
-    email:['good@good.com'],
-    password:[''],
+    email:['good@good.com', [Validators.required, Validators.email]],
+    password:['', Validators.required],
   })
 
-  constructor(private formBuilder:FormBuilder){}
+  constructor(private formBuilder:FormBuilder, private router:Router){}
 
   ngOnInit(): void {}
 
+  login(){
+    if(this.loginForm.valid){
+      console.log("Llamar al servicio del login");
+      this.router.navigateByUrl("/inicio");
+      this.loginForm.reset();
+    }
+    else{
+      alert("Error al ingresar los datos.");
+    }
+  }
 
 }

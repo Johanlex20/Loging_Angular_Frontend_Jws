@@ -1,3 +1,9 @@
 
 <p *ngIf="!userLoginOn" >Usuario No Autenticado</p>
 <P *ngIf="userLoginOn">Usuario Autenticado</P>
+
+<div class="" *ngIf="userLoginOn">
+    <p>Nombre: {{userDate?.name}}</p>
+    <p>Apellido: {{userDate?.lastName}}</p>
+    <p>Email: {{userDate?.email}}</p>
+</div>

@@ -9,14 +9,14 @@
           <li class="nav-item me-3" routerLinkActive="active">
             <a class="nav-link text-white" aria-current="page" routerLink="/inicio">INICIO</a>
           </li>
-          <li class="nav-item me-5" routerLinkActive="active">
+          <li *ngIf="userLoginOn"  class="nav-item me-5" routerLinkActive="active">
             <a class="nav-link text-white" aria-current="page" routerLink="/cliente">CLIENTES</a>
           </li>
           <li *ngIf="!userLoginOn" class="nav-item me-5" routerLinkActive="active">
-            <a class="nav-link text-white" aria-current="page" routerLink="/cliente">INICIAR SESIÓN</a>
+            <a class="nav-link text-white" aria-current="page" routerLink="/iniciar-sesion">INICIAR SESIÓN</a>
           </li>
           <li *ngIf="userLoginOn" class="nav-item me-5" routerLinkActive="active">
-            <a class="nav-link text-white" aria-current="page" routerLink="/cliente">CERRAR SESIÓN</a>
+            <a class="nav-link text-white" aria-current="page" routerLink="/inicio">CERRAR SESIÓN</a>
           </li>
         </ul>
         <form class="d-flex" role="search">

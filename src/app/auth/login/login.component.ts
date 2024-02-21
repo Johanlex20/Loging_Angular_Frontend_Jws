@@ -23,7 +23,18 @@ export class LoginComponent implements OnInit{
   login(){
     if(this.loginForm.valid){
       //console.log("Llamar al servicio del login");
-      this.loginService.login(this.loginForm.value as LoginRequest ); //le pasamos la informacion del formulario Y la comvertifos al formato de la clase indicada LoginRequest
+      /*le pasamos la informacion del formulario Y la comvertifos al formato de la clase indicada LoginRequest*/
+      this.loginService.login(this.loginForm.value as LoginRequest).subscribe({
+        next:(userData) =>{
+          console.log(userData)
+        },
+        error:(errorData)=>{
+          console.error(errorData)
+        },
+        complete:()=>{
+          console.info("Login completo");
+        }
+      });
       this.router.navigateByUrl("/inicio");
       this.loginForm.reset();
     }

@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg" style="background-color:  rgb(0, 148, 206);">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="#">Angular + Springboot + Jwt</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item me-3" routerLinkActive="active">
+            <a class="nav-link text-white" aria-current="page" routerLink="/inicio">INICIO</a>
+          </li>
+          <li class="nav-item me-5" routerLinkActive="active">
+            <a class="nav-link text-white" aria-current="page" routerLink="/cliente">CLIENTES</a>
+          </li>
+          <li *ngIf="!userLoginOn" class="nav-item me-5" routerLinkActive="active">
+            <a class="nav-link text-white" aria-current="page" routerLink="/cliente">INICIAR SESIÓN</a>
+          </li>
+          <li *ngIf="userLoginOn" class="nav-item me-5" routerLinkActive="active">
+            <a class="nav-link text-white" aria-current="page" routerLink="/cliente">CERRAR SESIÓN</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+          <button class="btn btn-outline-dark" type="submit">BUSCAR</button>
+        </form>
+      </div>
+    </div>
+  </nav>

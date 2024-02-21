@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms'; 
 import { Router } from '@angular/router';
+import { LoginService } from 'src/app/services/auth/login.service';
+import { LoginRequest } from 'src/app/services/auth/loginRequest';
 
 @Component({
   selector: 'app-login',
@@ -14,13 +16,14 @@ export class LoginComponent implements OnInit{
     password:['', Validators.required],
   })
 
-  constructor(private formBuilder:FormBuilder, private router:Router){}
+  constructor(private formBuilder:FormBuilder, private router:Router, private loginService:LoginService){}
 
   ngOnInit(): void {}
 
   login(){
     if(this.loginForm.valid){
-      console.log("Llamar al servicio del login");
+      //console.log("Llamar al servicio del login");
+      this.loginService.login(this.loginForm.value as LoginRequest ); //le pasamos la informacion del formulario Y la comvertifos al formato de la clase indicada LoginRequest
       this.router.navigateByUrl("/inicio");
       this.loginForm.reset();
     }

@@ -25,8 +25,16 @@ export class LoginComponent implements OnInit{
       this.loginForm.reset();
     }
     else{
+      this.loginForm.markAllAsTouched();
       alert("Error al ingresar los datos.");
     }
+  }
+
+  get email(){
+    return this.loginForm.controls.email;
+  }
+  get password(){
+    return this.loginForm.controls.password;
   }
 
 }

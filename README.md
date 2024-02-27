@@ -25,34 +25,3 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-
-1.	Creación de componentes Angular  							
-2.	Agregando rutas App.Component							
-3.	implementado footer y header								
-4.	Agregando Boostrap globalmente 							
-5.	Agregando fontawesom								
-6.	Agregando componente nav								
-7.	Implementando condicional para mostrar o no los links inicio y cerrar sección		
-
-8.	implementando sistema de ruteo 							
-9.	modificando rutas con routermodel 							
-
-10.	agregando estructura de formularios Reactivos, FormBuilder, ReactiveFormModule,formControlName	
-11.	Validaciones formularios Reactivos, Validators.
-
-12.	Agregando servicio  router para dar ingreso al login, enrutando
-
-13.	Validaciones visuales por el lado del cliente						
-
-14.	Add servicioLogin, add interfaz,	 implementando servicio login y la interfaz		
-
-15.	HttpClienteModule,Observables modificando servicesLogin para el manejo de errores pero después hay que modificarlo
-
-16.	Add interface user.ts, para implementarla en la función loginServices para que reconozca una plantilla de datos a Observar.
-
-17.	Manejo de errores, Catch, throwerror,HandleError, HttpErrorResponse,  actualización de la ruta en el componente login.ts
-
-18.	 BehaviorSubject, instanciar el beha.., asObservable(), actualizar con el método next(), tap
-
-19.	Ondestroy,
-
